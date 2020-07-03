@@ -1,0 +1,38 @@
+.footer{
+    flex-grow: 1;
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-item{
+            a{
+
+                text-decoration: underline;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+                text-decoration-line: underline;
+                color: #333333;
+                cursor: pointer;
+            }
+
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__info{ 
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .footer{
+        display: block;
+        flex-grow: unset;
+        padding-bottom: 53px;
+    }
+} 

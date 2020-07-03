@@ -1,0 +1,30 @@
+/* @mixin reset-btn */
+
+@define-mixin reset-btn  {
+    border: none;
+    outline: none;
+    background: transparent;
+  @mixin font Inter;
+  }
+ 
+
+@define-mixin font $name{
+    font-family: $name;
+    /* font-size: $pix; */
+} 
+
+@define-mixin arrow-blue $name, $numPix{
+  &:after{
+    content: url(/img/$name.svg);
+    margin-left: $numPix;
+  }
+}
+
+@define-mixin reset-input{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: "Inter";
+    background: transparent;
+
+}

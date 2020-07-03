@@ -1,0 +1,37 @@
+.redesign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-block{
+        flex-grow: 1;
+    }
+    &__title{
+        width: 600px;
+        height: 400px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__caption{
+        text-align: center;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        span{
+            color: #2F80ED;
+        }
+    }
+
+    &-footer{
+        padding-bottom: 57px;
+        a{
+            cursor: pointer;
+            color: #000;
+        }
+    }
+}

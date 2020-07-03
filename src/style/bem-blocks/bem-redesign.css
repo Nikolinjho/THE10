@@ -1,0 +1,105 @@
+.redesign{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+
+
+    &__header{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-calendar{
+            width: 214px;
+            height: 214px;
+            padding-top: 16px;
+            padding-bottom: 12px;
+            border-radius: 50px;
+            border: 1px solid #E0E0E0;
+            text-align: center;
+            margin-bottom: 93px;
+            .day{
+    
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 43px;
+                /* identical to box height */
+                text-align: center;
+                color: #2F80ED;
+            }
+    
+            .number{ 
+                font-weight: 200;
+                font-size: 130px;
+                line-height: 155px;
+                text-align: center;
+                color: #000000;
+                letter-spacing: -6px;
+                text-indent: -6px;
+            }
+        }
+    
+        &-title{
+            div{
+    
+                font-weight: normal;
+                font-size: 64px;
+                line-height: 76px;
+                text-align: center;
+                color: #000000;
+            }
+    
+            span{
+                font-weight: bold;
+                color: #2F80ED;
+            }
+        }
+    }
+
+    &__footer{
+        color: #BDBDBD;
+        text-align: center; 
+        padding-bottom: 27px;
+    }
+
+}
+
+
+
+
+@media  (max-width: 768px){
+    .redesign{
+    
+        &__header{
+
+            &-calendar{
+                width: 178px;
+                height: 178px;
+                padding-top: 13px;
+                padding-bottom: 10px;
+    
+                .day{
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+    
+                .number{
+                    font-size: 97px;
+                    line-height: 116px;
+                }
+            }
+    
+            &-title{
+                div{
+                    font-size: 27px;
+                    line-height: 32px;
+                }
+            }
+        }
+
+
+    }
+}

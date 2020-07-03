@@ -1,0 +1,227 @@
+.overlay {
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    transition: right .78s, opacity .7s;
+    opacity: 0.7;
+    z-index: 2;
+    background: #F2F2F2;
+    .window {
+        height: 100%;
+        &-left {
+            width: 50%;
+            background: url(/img/bg.jpg) no-repeat;
+            background-size: cover;
+        }
+        &-right {
+            width: 50%;
+            /* padding-left: 118px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .modal {
+                max-width: 540px;
+                width: 100%;
+                &__title {
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 44px;
+                    color: #000000;
+                }
+                &__block {
+                    .modal__input {
+                        &:first-child {
+                            margin-right: 72px;
+                        }
+                    }
+                }
+                &__input {
+                    margin-top: 33px;
+                    textarea {
+                        width: 100%;
+                        resize: none;
+                        max-height: 47px;
+                        display: none;
+                    }
+                }
+                &__btn {
+                    margin-top: 58px;
+                    button {
+                        padding: 0;
+                        cursor: pointer;
+                        @mixin reset-btn;
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 29px;
+                        color: #2F80ED;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* cross */
+
+.close {
+    position: absolute;
+    top: 124px;
+    right: 60px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1160px) {
+    .window {
+        height: 100%;
+        &-left {}
+        &-right {
+            .modal {
+                &__title {
+                    font-size: 26px;
+                    line-height: 31px;
+                }
+                &__block {}
+                &__input {
+                    input {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .overlay {
+        .window {
+            height: 100%;
+            &-left {
+                display: none;
+            }
+            &-right {
+                width: 100%;
+                .modal {
+                    padding-right: 25px;
+                    padding-left: 25px;
+                    &__title {
+                        font-size: 36px;
+                        line-height: 44px;
+                    }
+                    &__block {}
+                    &__input {
+                        input {
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                        .story {
+                            display: none;
+                        }
+                        textarea {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .overlay {
+        .window {
+            height: 100%;
+            &-left {}
+            &-right {
+                align-items: flex-start;
+                .modal {
+                    margin-top: 85px;
+                    &__title {
+                        font-size: 32px;
+                        line-height: 39px;
+                    }
+                    &__block {
+                        flex-direction: column;
+                        .modal__input {
+                            &:first-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    &__input {
+                        margin-top: 41px;
+                        input {
+                            width: 100%;
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                        .story {
+                            max-height: fit-content;
+                        }
+                    }
+                    &__btn {
+                        margin-top: 30px;
+                        button {
+                            font-size: 18px;
+                            line-height: 22px;
+                            svg {
+                                width: 13px;
+                                height: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .close {
+        svg {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .overlay {
+        .window {
+            height: 100%;
+            &-left {}
+            &-right {
+                .modal {
+                    &__title {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                    &__block {
+                        flex-direction: column;
+                        .name {
+                            margin-right: 0;
+                        }
+                    }
+                    &__input {
+                        margin-top: 41px;
+                        input {
+                            width: 100%;
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .close {
+        top: 41px;
+        right: 27px;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

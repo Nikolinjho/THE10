@@ -1,0 +1,83 @@
+.bem-link {
+    font-family: Inter;
+    font-style: normal;
+}
+
+.bem-icon {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.flex {
+    display: flex;
+}
+
+.bem-large {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.input {
+    @mixin reset-input;
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 14px;
+}
+
+/* block/none */
+
+.page-block {
+    display: none;
+    height: 100%;
+    &_active {
+        display: block;
+    }
+}
+
+.picture-block {
+    display: none;
+    height: 100%;
+    &_active {
+        display: block;
+    }
+}
+
+.grey {
+    color: #E0E0E0;
+}
+
+/* overlay */
+
+
+/* animation */
+
+.js-effect {
+    opacity: 0;
+    animation: revolveDrop .3s forwards;
+}
+
+.move {
+    transform: translateY(15px);
+    opacity: 0;
+    transition: transform .2s, opacity .3s;
+}
+
+@keyframes revolveDrop {
+    30% {
+        transform: translate(0, -50px) scale(1);
+    }
+    60% {
+        transform: translate(0, 20px) scale(.8);
+    }
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}
+
